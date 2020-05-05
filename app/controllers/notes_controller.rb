@@ -5,7 +5,8 @@ class NotesController < ApplicationController
   end
 
   def create
-    @note = Note.create()
+    @note = Note.create(user_id: , business_id:, )
+    redirect_to business_path(@note)
   end
 
     private
