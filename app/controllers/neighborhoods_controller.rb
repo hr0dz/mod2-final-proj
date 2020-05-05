@@ -11,11 +11,11 @@ class NeighborhoodsController < ApplicationController
   
   
   
-  private
+  # private
     
-    def neighborhood_params
-        params.require(:neighborhood).permit(
-          :name
-        )
-    end
+    # def neighborhood_params
+    #     params.require(:neighborhood).permit(
+    #       :name
+    #     )
+    # end
 end
