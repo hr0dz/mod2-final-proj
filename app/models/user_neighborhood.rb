@@ -1,4 +1,4 @@
-class User_Neighborhood < ApplicationRecord
+class UserNeighborhood < ApplicationRecord
     belongs_to :user
     belongs_to :neighborhood
 end
