@@ -1,5 +1,13 @@
 class NotesController < ApplicationController
 
+  def new 
+    @note = Note.new
+  end
+
+  def create
+    @note = Note.create()
+  end
+
     private
 
     def note_params
@@ -7,7 +15,7 @@ class NotesController < ApplicationController
           :name,
           :user_id,
           :business_id,
-          :content
+          :content,
           :title
         )
     end
