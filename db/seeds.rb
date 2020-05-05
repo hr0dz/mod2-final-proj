@@ -75,6 +75,5 @@ User.create(full_name: "Timothy Thedford", email: "tthedford@gmail.com", passwor
 Note.create(title: "I need fish sticks", content: "I need 10 boxes of fish sticks!", category: "request", business_id: Business.find_by(name: "Whole Foods Market - Lincoln Park").id, user_id: User.find_by(full_name: "Kanye West").id)
 Note.create(title: "milk please!", content: "I need a gallon of 2% milk, thanks!", category: "request", business_id: Business.find_by(name: "Target - Buck Town").id, user_id: User.find_by(full_name: "Jordan Carter").id)
 
-
 UserNeighborhood.create(user_id: User.find_by(full_name: "Kanye West").id, neighborhood_id: Neighborhood.find_by(name: "Lincoln Park").id)
 UserNeighborhood.create(user_id: User.find_by(full_name: "Jordan Carter").id, neighborhood_id: Neighborhood.find_by(name: "Buck Town").id)
