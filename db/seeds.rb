@@ -28,7 +28,7 @@ Business.create(name: "Petco - Roscoe Village", address: " 3320 N Western Ave. "
 Business.create(name: "Jewel_Osco - Roscoe Village", address: "3400 N Western Ave", neighborhood_id: Neighborhood.find_by(name: " Roscoe Village ").id
 
 
-Business.create(name: "Whole Foods Market - Lincoln Park", address: "  959 W Fullerton Ave.", neighborhood_id: Neighborhood.find_by(name: " Lincoln Park ").id
+Business.create(name: "Whole Foods Market - Lincoln Park", address: "  959 W Fullerton Ave.", neighborhood_id: Neighborhood.find_by(name: "Lincoln Park").id
 Business.create(name: "Foxtrot Market - Lincoln Park", address: "900 W Armitage Ave .", neighborhood_id: Neighborhood.find_by(name: " Lincoln Park ").id
 Business.create(name: "Park View Grocer - Lincoln Park", address: " 1940 N Clark St.", neighborhood_id: Neighborhood.find_by(name: " Lincoln Park ").id
 
