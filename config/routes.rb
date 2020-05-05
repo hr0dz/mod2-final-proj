@@ -1,4 +1,11 @@
-Rails.application.routes.draw do
+
+Rails.application.routes.draw do 
   resources :notes, only: [:index, :show]
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  resources :users, only: [:new, :create, :show, :index]
+  resources :neighborhoods, only: [:index, :show]
+  
+  get '/login', to: 'sessions#new', as: 'login'
+  post '/login', to: 'sessions#create'
+
 end
+

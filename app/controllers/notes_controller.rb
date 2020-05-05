@@ -1,4 +1,5 @@
 class NotesController < ApplicationController
+
     def index 
         @notes = Note.all 
     end 
@@ -14,4 +15,18 @@ class NotesController < ApplicationController
     def create 
         @note = Note.create()
     end 
+
+
+    private
+
+    def note_params
+        params.require(:note).permit(
+          :name,
+          :user_id,
+          :business_id,
+          :content
+          :title
+        )
+    end
+
 end
