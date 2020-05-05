@@ -18,12 +18,18 @@ class UsersController < ApplicationController
     end
       
 
-        def show
-            @user = User.find(params[:id])
-            if session[:user_id]
-            @current = User.find(session[:user_id])
-            end
+    def show
+        @user = User.find(params[:id])
+        if session[:user_id]
+        @current = User.find(session[:user_id])
         end
+    end
+
+    def edit
+    end
+
+    def update
+    end
 
     private
 
