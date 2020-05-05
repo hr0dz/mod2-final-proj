@@ -18,23 +18,27 @@ Business.create(name: “The Dill Pickle - Logan Square”, address: “2746 N M
 Business.create(name: “Fresh Market Place - Logan Square”, address: “2134 N Western Ave”, neighborhood_id: Neighborhood.find_by(name: “Logan Square”).id
 Business.create(name: “Walgreens - Logan Square”, address: “2001 N Milwaukee Ave”, neighborhood_id: Neighborhood.find_by(name: “Logan Square”).id
 
+Business.new(name: "Uptown Shop & Save", address: "4605 N Sheridan Rd.", neighborhood_id: Neighborhood.find_by(name: " Uptown").id
+Business.new(name: "Uptown Ace Hardware", address: " 4654 N Broadway", neighborhood_id: Neighborhood.find_by(name: " Uptown ").id
+Business.new(name: "Target", address: " 4466 N Broadway.", neighborhood_id: Neighborhood.find_by(name: " Uptown ").id
 
-Business.create(name: "Walgreens - Gold Coast", address: " 1200 N Dearborn St. ", neighborhood_id: Neighborhood.find_by(name: " Gold Coast ").id
-Business.create(name: "Potash Markets - Gold Coast", address: "1525 N Clark St. ", neighborhood_id: Neighborhood.find_by(name: " Gold Coast ").id
+
+Business.create(name: "Walgreens - Gold Coast", address: "1200 N Dearborn St.", neighborhood_id: Neighborhood.find_by(name: " Gold Coast ").id
+Business.create(name: "Potash Markets - Gold Coast", address: "1525 N Clark St.", neighborhood_id: Neighborhood.find_by(name: " Gold Coast ").id
 Business.create(name: "Whole Foods Market - Gold Coast", address: " 30 W Huron St", neighborhood_id: Neighborhood.find_by(name: " Gold Coast ").id
 
-Business.create(name: "Mariano's - Roscoe Village", address: " 3350 N Western Ave. ", neighborhood_id: Neighborhood.find_by(name: " Roscoe Village ").id
-Business.create(name: "Petco - Roscoe Village", address: " 3320 N Western Ave. ", neighborhood_id: Neighborhood.find_by(name: " Roscoe Village ").id
+Business.create(name: "Mariano's - Roscoe Village", address: " 3350 N Western Ave.", neighborhood_id: Neighborhood.find_by(name: " Roscoe Village ").id
+Business.create(name: "Petco - Roscoe Village", address: " 3320 N Western Ave.", neighborhood_id: Neighborhood.find_by(name: " Roscoe Village ").id
 Business.create(name: "Jewel_Osco - Roscoe Village", address: "3400 N Western Ave", neighborhood_id: Neighborhood.find_by(name: " Roscoe Village ").id
 
 
-Business.create(name: "Whole Foods Market - Lincoln Park", address: "  959 W Fullerton Ave.", neighborhood_id: Neighborhood.find_by(name: "Lincoln Park").id
-Business.create(name: "Foxtrot Market - Lincoln Park", address: "900 W Armitage Ave .", neighborhood_id: Neighborhood.find_by(name: " Lincoln Park ").id
+Business.create(name: "Whole Foods Market - Lincoln Park", address: "  959 W Fullerton Ave.", neighborhood_id: Neighborhood.find_by(name: " Lincoln Park ").id
+Business.create(name: "Foxtrot Market - Lincoln Park", address: "900 W Armitage Ave.", neighborhood_id: Neighborhood.find_by(name: " Lincoln Park ").id
 Business.create(name: "Park View Grocer - Lincoln Park", address: " 1940 N Clark St.", neighborhood_id: Neighborhood.find_by(name: " Lincoln Park ").id
 
 Business.create(name: "Whole Foods Market - Goose Island", address: " 1550 N Kingsbury St.", neighborhood_id: Neighborhood.find_by(name: " Goose Island ").id
-Business.create(name: "Target - Goose Island", address: "1200 N Larrabee St. " , neighborhood_id: Neighborhood.find_by(name: " Goose Island ").id
-Business.create(name: " PetSmart - Goose Island", address: " 1415 N Kingsbury St. ", neighborhood_id: Neighborhood.find_by(name: " Goose Island ").id
+Business.create(name: "Target - Goose Island", address: "1200 N Larrabee St." , neighborhood_id: Neighborhood.find_by(name: " Goose Island ").id
+Business.create(name: "PetSmart - Goose Island", address: " 1415 N Kingsbury St.", neighborhood_id: Neighborhood.find_by(name: " Goose Island ").id
 
 
 Business.create(name: “Go Grocer - Wicker Park”, address: “1857 W North Ave”, neighborhood_id: Neighborhood.find_by(name: “Wicker Park”).id
@@ -52,7 +56,7 @@ User.create(full_name: "Chancelor Bennett", email: "cbennet@gmail.com" , passwor
 User.create(full_name: "Nayvadius Wilburn", email: "nwilburn@gmail.com" , password: "sadfuture23" )
 User.create(full_name: "Aubrey Graham", email: "agraham@gmail.com" , password: "sixgawd45" )
 User.create(full_name: "Megan Ruth", email: "mruth@gmail.com", password: "hotgirl97" )
-User.create(full_name: "Solana Rowe" , email: "srowe@gmail.com" , password: "hotty2scotty34" )
+User.create(full_name: "Solana Rowe", email: "srowe@gmail.com" , password: "hotty2scotty34" )
 User.create(full_name: "Sean Anderson", email: "sanderson@gmail.com" , password: "babyjhene54" )
 User.create(full_name: "Jhene Aiko", email: "jaiko@gamil.com" , password: "babysean23" )
 User.create(full_name: "Rodric Davis", email: "rdavis@gmail.com" , password: "gucciclone93" )
