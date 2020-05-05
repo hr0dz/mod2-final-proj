@@ -84,7 +84,7 @@ Note.create(title: "Getting dog food today", content: "I'm making a run arund 2p
 Note.create(title: "TP emergency!!!", content: "I need toilet paper..plz help!!", category: "request", business_id: Business.find_by(name: "Target - Goose Island").id, user_id: User.find_by(full_name: "kendrick Lamar").id)
 Note.create(title: "Hardware run", content: "Will be picking up hardware supplies this weekend, hmu if you need anything", category: "run", business_id: Business.find_by(name: "Uptown Ace Hardware").id, user_id: User.find_by(full_name: "Jermaine Cole").id)
 Note.create(title: "Target pickup", content: "Anyone able to pick me up the Golden Girls Blu-ray box set??", category: "request", business_id: Business.find_by(name: "Target - Uptown").id, user_id: User.find_by(full_name: "Chancelor Bennett").id)
-
+Note.create(title: "")
 
 
 UserNeighborhood.create(user_id: User.find_by(full_name: "Shawn Corey Carter").id, neighborhood_id: Neighborhood.find_by(name: "Roscoe Village").id)
@@ -93,5 +93,6 @@ UserNeighborhood.create(user_id: User.find_by(full_name: "kendrick Lamar").id, n
 UserNeighborhood.create(user_id: User.find_by(full_name: "kendrick Lamar").id, neighborhood_id: Neighborhood.find_by(name: "Gold Coast").id)
 UserNeighborhood.create(user_id: User.find_by(full_name: "Jermaine Cole").id, neighborhood_id: Neighborhood.find_by(name: "Uptown").id)
 UserNeighborhood.create(user_id: User.find_by(full_name: "Chancelor Bennett").id, neighborhood_id: Neighborhood.find_by(name: "Uptown").id)
-
+UserNeighborhood.create(user_id: User.find_by(full_name: "Nayvadius Wilburn").id, neighborhood_id: Neighborhood.find_by(name: "Buck Town").id)
+UserNeighborhood.create(user_id: User.find_by(full_name: "Nayvadius Wilburn").id, neighborhood_id: Neighborhood.find_by(name: "Wicker Park").id)
 
