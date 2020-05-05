@@ -27,7 +27,7 @@ Business.create(name: "Walgreens - Logan Square", address: "2001 N Milwaukee Ave
 
 Business.create(name: "Uptown Shop & Save", address: "4605 N Sheridan Rd.", neighborhood_id: Neighborhood.find_by(name: "Uptown").id)
 Business.create(name: "Uptown Ace Hardware", address: "4654 N Broadway", neighborhood_id: Neighborhood.find_by(name: "Uptown").id)
-Business.create(name: "Target", address: "4466 N Broadway.", neighborhood_id: Neighborhood.find_by(name: "Uptown").id)
+Business.create(name: "Target - Uptown", address: "4466 N Broadway.", neighborhood_id: Neighborhood.find_by(name: "Uptown").id)
 
 
 Business.create(name: "Walgreens - Gold Coast", address: "1200 N Dearborn St.", neighborhood_id: Neighborhood.find_by(name: "Gold Coast").id)
@@ -77,3 +77,21 @@ Note.create(title: "milk please!", content: "I need a gallon of 2% milk, thanks!
 
 UserNeighborhood.create(user_id: User.find_by(full_name: "Kanye West").id, neighborhood_id: Neighborhood.find_by(name: "Lincoln Park").id)
 UserNeighborhood.create(user_id: User.find_by(full_name: "Jordan Carter").id, neighborhood_id: Neighborhood.find_by(name: "Buck Town").id)
+
+
+
+Note.create(title: "Getting dog food today", content: "I'm making a run arund 2pm today, let me know what you need.", category: "run", business_id: Business.find_by(name: "Petco - Roscoe Village").id, user_id: User.find_by(full_name: "Shawn Corey Carter").id)
+Note.create(title: "TP emergency!!!", content: "I need toilet paper..plz help!!", category: "request", business_id: Business.find_by(name: "Target - Goose Island").id, user_id: User.find_by(full_name: "kendrick Lamar").id)
+Note.create(title: "Hardware run", content: "Will be picking up hardware supplies this weekend, hmu if you need anything", category: "run", business_id: Business.find_by(name: "Uptown Ace Hardware").id, user_id: User.find_by(full_name: "Jermaine Cole").id)
+Note.create(title: "Target pickup", content: "Anyone able to pick me up the Golden Girls Blu-ray box set??", category: "request", business_id: Business.find_by(name: "Target - Uptown").id, user_id: User.find_by(full_name: "Chancelor Bennett").id)
+
+
+
+UserNeighborhood.create(user_id: User.find_by(full_name: "Shawn Corey Carter").id, neighborhood_id: Neighborhood.find_by(name: "Roscoe Village").id)
+UserNeighborhood.create(user_id: User.find_by(full_name: "Shawn Corey Carter").id, neighborhood_id: Neighborhood.find_by(name: "Lincoln Park").id)
+UserNeighborhood.create(user_id: User.find_by(full_name: "kendrick Lamar").id, neighborhood_id: Neighborhood.find_by(name: "Goose Island").id)
+UserNeighborhood.create(user_id: User.find_by(full_name: "kendrick Lamar").id, neighborhood_id: Neighborhood.find_by(name: "Gold Coast").id)
+UserNeighborhood.create(user_id: User.find_by(full_name: "Jermaine Cole").id, neighborhood_id: Neighborhood.find_by(name: "Uptown").id)
+UserNeighborhood.create(user_id: User.find_by(full_name: "Chancelor Bennett").id, neighborhood_id: Neighborhood.find_by(name: "Uptown").id)
+
+
