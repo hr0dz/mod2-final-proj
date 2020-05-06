@@ -1,9 +1,18 @@
 Rails.application.routes.draw do 
+  # get 'comments/new'
+  # get 'comments/create'
+  # get 'comments/edit'
+  # get 'comments/update'
+  # get 'comments/destroy'
   resources :notes, only: [:index, :show, :edit, :update]
   #resources :notes, only: [:index, :show]
   resources :users, only: [:new, :create, :show, :index, :edit, :update]
   resources :neighborhoods, only: [:index, :show]
   resources :businesses, only: [:index, :show] do
+  resources :notes, only: [:new, :create] do 
+  resources :comments, only: [:new, :create, :edit, :update, :delete]
+end
+
 
   resources :notes, only: [:new, :create, :edit, :update]
   end
