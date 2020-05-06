@@ -1,9 +1,8 @@
 class SessionsController < ApplicationController
-    def new
-    end
-
-    def create
-    end
+  include SessionsHelper
+    
+  def new
+  end
 
     def create
         user = User.find_by(email: params[:email])
@@ -11,8 +10,14 @@ class SessionsController < ApplicationController
           session[:user_id] = user.id
           redirect_to user
         else
-          flash[:message] = "Invalid credentials"
+          flash[:message] = "wah wah"
           redirect_to login_path
         end
+    end
+
+
+      def destroy
+        session[:user_id] = nil
+        redirect_to neighborhoods_path
     end
 end
