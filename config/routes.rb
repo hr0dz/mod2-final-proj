@@ -11,12 +11,16 @@ Rails.application.routes.draw do
   # post '/businesses/:business_id/notes', to: 'notes#create'
   # post '/notes', to: 'notes#create'
 
+  
+
+  post '/login', to: 'sessions#create'
+  delete '/notes/:id', to: 'notes#delete', as: 'delete_note'
   delete '/delete', to: 'notes#delete', as: 'delete_note'
 
   # get '/businesses/:business_id/notes/new', to: 'notes#new', as: 'new_note'
   # post '/businesses/:business_id/notes', to: 'notes#create'
   # post '/notes', to: 'notes#create'
-end 
+
   get '/login', to: 'sessions#new', as: 'login'
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
