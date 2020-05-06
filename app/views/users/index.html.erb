@@ -1,0 +1,9 @@
+ <%= link_to "Make An Account", new_user_path %>
+
+<ul>
+ <% @user.each do |user|%>
+    <li><%= user.full_name %></li>
+    <li><%= user.email %></li>
+    <br>
+ <% end %>
+ </ul>

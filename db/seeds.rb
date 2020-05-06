@@ -21,6 +21,7 @@ Neighborhood.create(name: "Roscoe Village")
 Neighborhood.create(name: "Gold Coast")
 Neighborhood.create(name: "Lincoln Park")
 Neighborhood.create(name: "Goose Island")
+
 Business.create(name: "The Dill Pickle - Logan Square", address: "2746 N Milwaukee Ave", neighborhood_id: Neighborhood.find_by(name: "Logan Square").id)
 Business.create(name: "Fresh Market Place - Logan Square", address: "2134 N Western Ave", neighborhood_id: Neighborhood.find_by(name: "Logan Square").id)
 Business.create(name: "Walgreens - Logan Square", address: "2001 N Milwaukee Ave", neighborhood_id: Neighborhood.find_by(name: "Logan Square").id)
@@ -28,7 +29,6 @@ Business.create(name: "Walgreens - Logan Square", address: "2001 N Milwaukee Ave
 Business.create(name: "Uptown Shop & Save", address: "4605 N Sheridan Rd.", neighborhood_id: Neighborhood.find_by(name: "Uptown").id)
 Business.create(name: "Uptown Ace Hardware", address: "4654 N Broadway", neighborhood_id: Neighborhood.find_by(name: "Uptown").id)
 Business.create(name: "Target - Uptown", address: "4466 N Broadway.", neighborhood_id: Neighborhood.find_by(name: "Uptown").id)
-
 
 Business.create(name: "Walgreens - Gold Coast", address: "1200 N Dearborn St.", neighborhood_id: Neighborhood.find_by(name: "Gold Coast").id)
 Business.create(name: "Potash Markets - Gold Coast", address: "1525 N Clark St.", neighborhood_id: Neighborhood.find_by(name: "Gold Coast").id)
@@ -51,6 +51,7 @@ Business.create(name: "PetSmart - Goose Island", address: "1415 N Kingsbury St."
 Business.create(name: "Go Grocer - Wicker Park", address: "1857 W North Ave", neighborhood_id: Neighborhood.find_by(name: "Wicker Park").id)
 Business.create(name: "Jewel-Osco - Wicker Park", address: "1341 N Paulina St", neighborhood_id: Neighborhood.find_by(name: "Wicker Park").id)
 Business.create(name: "Pet Supplies Plus - Wicker Park", address: "1289 N Milwaukee Ave", neighborhood_id: Neighborhood.find_by(name: "Wicker Park").id)
+
 Business.create(name: "Target - Buck Town", address: "2656 N Elston Ave", neighborhood_id: Neighborhood.find_by(name: "Buck Town").id)
 Business.create(name: "The Home Depot - Buck Town", address: "2570 N Elston Ave", neighborhood_id: Neighborhood.find_by(name: "Buck Town").id)
 Business.create(name: "Mariano’s - Buck Town", address: "2112 N Ashland Ave", neighborhood_id: Neighborhood.find_by(name: "Buck Town").id)
@@ -84,7 +85,7 @@ Note.create(title: "Getting dog food today", content: "I'm making a run arund 2p
 Note.create(title: "TP emergency!!!", content: "I need toilet paper..plz help!!", category: "request", business_id: Business.find_by(name: "Target - Goose Island").id, user_id: User.find_by(full_name: "kendrick Lamar").id)
 Note.create(title: "Hardware run", content: "Will be picking up hardware supplies this weekend, hmu if you need anything", category: "run", business_id: Business.find_by(name: "Uptown Ace Hardware").id, user_id: User.find_by(full_name: "Jermaine Cole").id)
 Note.create(title: "Target pickup", content: "Anyone able to pick me up the Golden Girls Blu-ray box set??", category: "request", business_id: Business.find_by(name: "Target - Uptown").id, user_id: User.find_by(full_name: "Chancelor Bennett").id)
-
+Note.create(title: "")
 
 
 UserNeighborhood.create(user_id: User.find_by(full_name: "Shawn Corey Carter").id, neighborhood_id: Neighborhood.find_by(name: "Roscoe Village").id)
@@ -93,5 +94,6 @@ UserNeighborhood.create(user_id: User.find_by(full_name: "kendrick Lamar").id, n
 UserNeighborhood.create(user_id: User.find_by(full_name: "kendrick Lamar").id, neighborhood_id: Neighborhood.find_by(name: "Gold Coast").id)
 UserNeighborhood.create(user_id: User.find_by(full_name: "Jermaine Cole").id, neighborhood_id: Neighborhood.find_by(name: "Uptown").id)
 UserNeighborhood.create(user_id: User.find_by(full_name: "Chancelor Bennett").id, neighborhood_id: Neighborhood.find_by(name: "Uptown").id)
-
+UserNeighborhood.create(user_id: User.find_by(full_name: "Nayvadius Wilburn").id, neighborhood_id: Neighborhood.find_by(name: "Buck Town").id)
+UserNeighborhood.create(user_id: User.find_by(full_name: "Nayvadius Wilburn").id, neighborhood_id: Neighborhood.find_by(name: "Wicker Park").id)
 

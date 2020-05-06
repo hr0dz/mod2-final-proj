@@ -1,4 +1,8 @@
 class User < ApplicationRecord
+    has_secure_password
+
+    validates :email, presence: true, uniqueness: true
+    
     has_many :notes
     has_many :user_neighborhoods
     has_many :neighborhoods, through: :user_neighborhoods

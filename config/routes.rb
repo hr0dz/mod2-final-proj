@@ -1,5 +1,19 @@
-Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+Rails.application.routes.draw do 
+  resources :notes, only: [:index, :show, :edit, :update]
+  #resources :notes, only: [:index, :show]
+  resources :users, only: [:new, :create, :show, :index]
+  resources :neighborhoods, only: [:index, :show]
   resources :businesses, only: [:index, :show]
-  resources :notes, only: [:index, :show, :new, :create, :edit, :update]
+  resources :businesses do
+    resources :notes
+  end
+  get '/businesses/:bussiness_id/notes/new', to: 'notes#new', as: 'new_note'
+  post '/businesses/:bussiness_id/notes', to: 'notes#create'
+  post '/notes', to: 'notes#create'
+  
+  get '/login', to: 'sessions#new', as: 'login'
+  post '/login', to: 'sessions#create'
+
 end
+
