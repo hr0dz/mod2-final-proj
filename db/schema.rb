@@ -10,12 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 6) do
+ActiveRecord::Schema.define(version: 2020_05_06_201411) do
 
   create_table "businesses", force: :cascade do |t|
     t.string "name"
     t.string "address"
     t.integer "neighborhood_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.string "message"
+    t.integer "note_id"
+    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -32,6 +40,7 @@ ActiveRecord::Schema.define(version: 6) do
     t.string "content"
     t.string "title"
     t.string "category"
+    t.integer "comment_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -47,6 +56,7 @@ ActiveRecord::Schema.define(version: 6) do
     t.string "full_name"
     t.string "email"
     t.string "password"
+    t.integer "comment_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "password_digest"
