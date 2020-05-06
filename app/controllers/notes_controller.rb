@@ -27,6 +27,7 @@ class NotesController < ApplicationController
     def delete
       @note = Note.find(params[:id])
       @note.destroy
+      redirect_to business_path(@note.business)
     end
 
 

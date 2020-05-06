@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   
   get '/login', to: 'sessions#new', as: 'login'
   post '/login', to: 'sessions#create'
-  delete '/delete', to: 'notes#delete', as: 'delete_note'
+  delete '/notes/:id', to: 'notes#delete', as: 'delete_note'
 
 
 end
