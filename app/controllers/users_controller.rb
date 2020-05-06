@@ -11,7 +11,8 @@ class UsersController < ApplicationController
         @user = User.new(user_params)
         if @user.save
           session[:user_id] = @user.id
-          redirect_to neighborhoods_path
+          redirect_to @user
+          #redirect_to neighborhoods_path
         else
           p @user.errors.full_messages
           render :new
@@ -22,7 +23,7 @@ class UsersController < ApplicationController
     def show
         @user = User.find(params[:id])
         if session[:user_id]
-        @current = User.find(session[:user_id])
+        @current_user = User.find(session[:user_id])
         end
     end
 
@@ -33,9 +34,9 @@ class UsersController < ApplicationController
         #end   
    # end
 
-    def update
-        @user = User.update(user_params)
-    end
+    #def update
+        #@user = User.update(user_params)
+    #end
 
     private
 

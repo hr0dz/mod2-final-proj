@@ -12,7 +12,6 @@ User.destroy_all
 Business.destroy_all
 UserNeighborhood.destroy_all
 
-
 Neighborhood.create(name: "Logan Square")
 Neighborhood.create(name: "Wicker Park")
 Neighborhood.create(name: "Buck Town")
@@ -21,7 +20,6 @@ Neighborhood.create(name: "Roscoe Village")
 Neighborhood.create(name: "Gold Coast")
 Neighborhood.create(name: "Lincoln Park")
 Neighborhood.create(name: "Goose Island")
-
 Business.create(name: "The Dill Pickle", address: "2746 N Milwaukee Ave", neighborhood_id: Neighborhood.find_by(name: "Logan Square").id)
 Business.create(name: "Fresh Market Place", address: "2134 N Western Ave", neighborhood_id: Neighborhood.find_by(name: "Logan Square").id)
 Business.create(name: "Walgreens - Logan Square", address: "2001 N Milwaukee Ave", neighborhood_id: Neighborhood.find_by(name: "Logan Square").id)

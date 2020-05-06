@@ -7,7 +7,9 @@
 <% @business.notes.each do |note| %>
 <li><%= note.title %></li>
 <p><%= note.content %></p>
-<li><%= note.category%></li>
+<li><%= note.category%></li><br>
+<%= link_to "Edit Note", edit_note_path(note)%><br>
+<%= link_to "Delete Note", delete_note_path(note), method: :delete  %><br>
 <br>
 <% end %>
 </ul>
