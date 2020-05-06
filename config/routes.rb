@@ -1,7 +1,6 @@
 
 Rails.application.routes.draw do 
   resources :notes, only: [:index, :show, :new, :create, :edit, :update]
-  #resources :notes, only: [:index, :show]
   resources :users, only: [:new, :create, :show, :index]
   resources :neighborhoods, only: [:index, :show]
   resources :businesses, only: [:index, :show]
@@ -11,3 +10,4 @@ Rails.application.routes.draw do
 
 end
 
+ 
