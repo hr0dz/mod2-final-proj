@@ -10,6 +10,26 @@
   </head>
 
   <body>
+  <header class='clearfix'>
+  <div class="left-nav">
+    <ul>
+      <li><%= link_to "Home", neighborhoods_path %></li>
+    </ul>
+  </div>
+  <div class="right-nav">
+    <ul>
+    <% if signed_in? %>
+    <%= link_to "Logout", logout_path, method: :delete %>
+  <% else %>
+    <%= link_to 'Log in', login_path %>
+  <% end %>
+  <p><%= flash[:message] %></p>
+  
+    </ul>
+  </div>
+</header>
+<div class='content'>
     <%= yield %>
+  </div>
   </body>
 </html>

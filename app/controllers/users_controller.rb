@@ -27,17 +27,6 @@ class UsersController < ApplicationController
         end
     end
 
-    #def edit
-        #@user = User.find(params[:id])
-       # if session[:user_id]
-        #@current = User.find(session[:user_id])
-        #end   
-   # end
-
-    #def update
-        #@user = User.update(user_params)
-    #end
-
     private
 
     def user_params
