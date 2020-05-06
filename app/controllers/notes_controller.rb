@@ -11,15 +11,36 @@ class NotesController < ApplicationController
 
     def show 
         @note = Note.find(params[:id])
-    end 
+    end
+    
+    def edit
+      @note = Note.find(params[:id])
+    end
+
+    def update
+      @note = Note.find(params[:id])
+      @note.assign_attributes(note_params)
+      @note.save!
+      redirect_to business_path(@note.business)
+    end
+
+    def delete
+      @note = Note.find(params[:id])
+      @note.destroy
+    end
+
 
   def create
     @business = Business.find(params[:business_id])
     @note = @business.notes.build(note_params)
     @current = User.find(session[:user_id])
     @note.user = @current
-    @note.save!
-    redirect_to business_path(@business)
+    @note.save
+    if @note.save
+      redirect_to business_path(@business)
+    else
+      render :new
+    end
   end
 
     private
@@ -33,3 +54,4 @@ class NotesController < ApplicationController
     end
 
 end
+

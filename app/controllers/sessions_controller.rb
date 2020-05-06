@@ -16,7 +16,7 @@ class SessionsController < ApplicationController
     end
 
 
-      def destroy
+      def delete
         session[:user_id] = nil
         redirect_to neighborhoods_path
     end
