@@ -1,11 +1,13 @@
-<h1><%= @user.full_name %></h1>
 
 
-<% if @current %>
-  (logged in as <%= @current.email %>)
+
+<% if @current_user %>
+ <h1>Welcome, <%= @user.full_name %>!</h1>
+  Logged in as <%= @current_user.email %>
 <% end %>
+
 <br>
 
-<%= link_to "Finish Creating Your Profile", edit_user_path  %>
+Taking you to back to home
+<meta HTTP-EQUIV="REFRESH" content="5; url=http://www.localhost:3000/neighborhoods">
 
-#### prob dont need any of this
