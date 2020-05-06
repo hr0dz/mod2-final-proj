@@ -12,6 +12,16 @@ Rails.application.routes.draw do
   resources :notes, only: [:new, :create] do 
   resources :comments, only: [:new, :create, :edit, :update, :delete]
 end
+
+
+  resources :notes, only: [:new, :create, :edit, :update]
+  end
+  # get '/businesses/:business_id/notes/new', to: 'notes#new', as: 'new_note'
+  # post '/businesses/:business_id/notes', to: 'notes#create'
+  # post '/notes', to: 'notes#create'
+
+  delete '/delete', to: 'notes#delete', as: 'delete_note'
+
   # get '/businesses/:business_id/notes/new', to: 'notes#new', as: 'new_note'
   # post '/businesses/:business_id/notes', to: 'notes#create'
   # post '/notes', to: 'notes#create'
