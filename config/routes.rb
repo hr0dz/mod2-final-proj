@@ -1,11 +1,17 @@
 Rails.application.routes.draw do 
+  # get 'comments/new'
+  # get 'comments/create'
+  # get 'comments/edit'
+  # get 'comments/update'
+  # get 'comments/destroy'
   resources :notes, only: [:index, :show, :edit, :update]
   #resources :notes, only: [:index, :show]
   resources :users, only: [:new, :create, :show, :index, :edit, :update]
   resources :neighborhoods, only: [:index, :show]
   resources :businesses, only: [:index, :show] do
-  resources :notes, only: [:new, :create]
-
+  resources :notes, only: [:new, :create] do 
+  resources :comments, only: [:new, :create, :edit, :update, :delete]
+end
   # get '/businesses/:business_id/notes/new', to: 'notes#new', as: 'new_note'
   # post '/businesses/:business_id/notes', to: 'notes#create'
   # post '/notes', to: 'notes#create'
@@ -14,3 +20,4 @@ end
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
 end
+
