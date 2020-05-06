@@ -1,3 +1,8 @@
+<% @note.errors.full_messages.each do |error| %>
+<%= error %><br>
+<% end %>
+
+
 <h2>New Note Form</h2>
 
 <%= form_for [@business, @note] do |f| %>
@@ -7,9 +12,8 @@
 <%= f.label :'Content' %><br>
 <%= f.text_area :content %><br> 
 <br>
-<%= f.select :category, ["request", "run"] %><br>
+<%= f.select :category, ["request", "run"], :prompt => "Note type select..." %><br>
 <br>
 <%= f.submit %>
 <% end %>
 
-<!--, :prompt => "Note type select..." >
