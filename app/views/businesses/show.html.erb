@@ -1,10 +1,16 @@
 <h2><%= @business.name %></h2>
 <h2><%= @business.address %></h2><br>
+
+
+
+<ul>
 <% @business.notes.each do |note| %>
-<h1><%=note.title %></h1><br>
-<h1><%=note.content %></h1><br>
-<h1><%=note.user.full_name %></h1><br>
+<li><%= note.title %></li>
+<p><%= note.content %></p>
+<li><%= note.category%></li>
+<br>
 <% end %>
+</ul>
 
 
 <h3><%= link_to "Create Note for Business", new_business_note_path(@business) %></h3>
