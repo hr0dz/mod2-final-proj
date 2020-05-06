@@ -1,6 +1,6 @@
 <h2>New Note Form</h2>
 
-<%= form_for @note do |f| %>
+<%= form_for [@business, @note] do |f| %>
 <%= f.label :'Title:' %><br>
 <%= f.text_field :title %><br>
 <br>
