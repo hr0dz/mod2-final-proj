@@ -12,10 +12,11 @@ class NotesController < ApplicationController
         @note = Note.find(params[:id])
     end 
 
-    def create 
-        @note = Note.create()
-    end 
-
+  def create
+    @note = Note.create(note_params)
+    @business = Business.find(params[:id])
+    redirect_to business_path(@business)
+  end
 
     private
 
