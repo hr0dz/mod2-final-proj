@@ -18,8 +18,12 @@ class NotesController < ApplicationController
     @note = @business.notes.build(note_params)
     @current = User.find(session[:user_id])
     @note.user = @current
-    @note.save!
-    redirect_to business_path(@business)
+    @note.save
+    if @note.save
+      redirect_to business_path(@business)
+    else
+      render :new
+    end
   end
 
     private
@@ -33,3 +37,4 @@ class NotesController < ApplicationController
     end
 
 end
+
