@@ -2,6 +2,7 @@ class NotesController < ApplicationController
 
     def new 
         @note = Note.new
+        @business = Business.find(params[:business_id])
     end 
 
     def index 
@@ -13,8 +14,11 @@ class NotesController < ApplicationController
     end 
 
   def create
-    @note = Note.create(note_params)
-    @business = Business.find(params[:id])
+    @business = Business.find(params[:business_id])
+    @note = @business.notes.build(note_params)
+    @current = User.find(session[:user_id])
+    @note.user = @current
+    @note.save!
     redirect_to business_path(@business)
   end
 
@@ -23,8 +27,7 @@ class NotesController < ApplicationController
     def note_params
         params.require(:note).permit(
           :name,
-          :user_id,
-          :business_id,
+          :category,
           :content,
           :title
         )
