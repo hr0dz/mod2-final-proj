@@ -16,18 +16,26 @@
 
  body {
   background-color: snow;
- }
+  background-image: url(https://img.pngio.com/chicago-star-png-8-png-image-chicago-stars-png-257_300.png);
+  background-repeat: no-repeat
+  
+}
 
  .centered-title {
    text-align: center;
-  
+   font-size: 70px;
+   background-color: #B3DDF2;
+   font-family: Arial, Helvetica, sans-serif;   
+
  }
 
  .neighborhoods-list{
   width: 100%; 
   display: flex;
   flex-wrap: wrap;
-   justify-content: space-evenly; 
+  justify-content: space-evenly; 
+  font-size: 40px;
+  text-decoration: none 
  }
  .neighborhoods-list > * {
   width: 50%;
@@ -38,11 +46,25 @@
 .note-body{
   border-style: solid;
   border-width: 2px;
-  padding: 12px;
+  padding-top: 0px;
   border-radius: 5px; 
 }
 
 .note-title{
-  border-bottom: 2px;
+  font-size: 30px;
+  background-color: #B3DDF2;
+  border-bottom: 5px solid red;
+  margin-bottom: 5px;
+  padding-left: 5px;
   color: red;
 }
+.note-content{
+  font-size: 25px;
+  padding-left: 5px;
+}
+
+.note-name{
+  font-size: 20px;
+  padding-left: 5px;
+}
+

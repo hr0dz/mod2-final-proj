@@ -1,7 +1,7 @@
 Rails.application.routes.draw do 
 
   delete '/notes/:id', to: 'notes#delete', as: 'delete_note'
-
+  root('neighborhoods#index')
   # get '/businesses/:business_id/notes/new', to: 'notes#new', as: 'new_note'
   post '/businesses/:business_id/notes', to: 'notes#create'
   # post '/notes', to: 'notes#create'
