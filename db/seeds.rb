@@ -82,7 +82,7 @@ Note.create(title: "Target pickup", content: "Anyone able to pick me up the Gold
 Note.create(title: "anyone going to jewel?", content: "I need pudding and cheetos", category: "request", business_id: Business.find_by(name: "Jewel-Osco - Wicker Park").id, user_id: User.find_by(full_name: "Nayvadius Wilburn").id)
 Note.create(title: "Potash Market trip", content: "Tomorrow in the AM i am making a run", category: "run", business_id: Business.find_by(name: "Potash Markets - Gold Coast").id, user_id: User.find_by(full_name: "Timothy Thedford").id)
 Note.create(title: "blueberries", content: "I need organic blueberries, stat", category: "request", business_id: Business.find_by(name: "The Dill Pickle").id, user_id: User.find_by(full_name: "Tauheed Epps").id)
-Note.create(title: "weekend run", content: "will be going this weekend", category: "run", business_id: Business.find_by(name: "The Dill Pickle").id, user_id: User.find_by(full_name: "Symere Woods").id)
+Note.create(title: "weekend trip", content: "will be going this weekend", category: "run", business_id: Business.find_by(name: "The Dill Pickle").id, user_id: User.find_by(full_name: "Symere Woods").id)
 
 
 UserNeighborhood.create(user_id: User.find_by(full_name: "Kanye West").id, neighborhood_id: Neighborhood.find_by(name: "Lincoln Park").id)
