@@ -51,6 +51,7 @@ class NotesController < ApplicationController
           :category,
           :content,
           :title
+          #:user_id
         )
     end
 
