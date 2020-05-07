@@ -32,10 +32,8 @@
    font-size: 70px;
    background-color: #B3DDF2;
    font-family: Arial, Helvetica, sans-serif;
-   margin: 0px;   
-
+   margin: 0px;
  }
-
 
  .neighborhoods-list{
   width: 100%; 
@@ -43,9 +41,9 @@
   flex-wrap: wrap;
   justify-content: space-evenly; 
   font-size: 40px;
-  text-decoration: none;
-  
+  text-decoration: none; 
  }
+
  .neighborhoods-list > * {
   width: 50%;
   text-align: center;
@@ -71,6 +69,7 @@
   padding-left: 5px;
   color: red;
 }
+
 .note-content{
   font-size: 25px;
   padding-left: 5px;
