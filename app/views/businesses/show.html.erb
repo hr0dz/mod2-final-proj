@@ -1,18 +1,30 @@
 <h2><%= @business.name %></h2>
-<h2><%= @business.address %></h2><br>
+<h2><%= @business.address %></h2>
+<h4><%= link_to "Create Note for Business", new_business_note_path(@business) %></h4>
+<br>
+<h1>All Notes</h1>
+
 
 
 
 <ul>
 <% @business.notes.each do |note| %>
-<li><%= note.title %></li>
-<p><%= note.content %></p>
-<li><%= note.category%></li><br>
-<%= link_to "Edit Note", edit_note_path(note)%><br>
-<%= button_to "Delete Note", delete_note_path(note), method: :delete  %><br>
-<br>
+    <h2><%= note.title %></h2>
+    <p><%= note.content %></p>
+    <p><%= note.category%></p><br>
+    <p>Written by: <%= note.user.full_name %></p><br><br>
+    <% if current_user == note.user %>
+        <%= link_to "Edit Note", edit_note_path(note)%><br>
+        <%= button_to "Delete Note", delete_note_path(note), method: :delete, data: {confirm: "Are you sure?"}  %><br>
+    <% end %>
+    <h2>This note has <%= pluralize(note.comments.count, "Comment") %> </h2>
+    <%= render note.comments.order("created_at Desc") %>
+    <h3>Add a Comment:</h3>
+    <%= render partial: 'comments/form', locals: {note: note} %>
+    <br>
 <% end %>
 </ul>
 
+<%# <%= render partial: 'comments/comment', collection: @comments%> 
 
-<h3><%= link_to "Create Note for Business", new_business_note_path(@business) %></h3>
+

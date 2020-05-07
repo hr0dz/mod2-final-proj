@@ -7,4 +7,6 @@ class User < ApplicationRecord
     has_many :user_neighborhoods
     has_many :neighborhoods, through: :user_neighborhoods
     has_many :businesses, through: :notes
+    has_many :comments 
+    has_many :notes, through: :comments
 end

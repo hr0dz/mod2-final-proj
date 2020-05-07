@@ -6,6 +6,8 @@ class BusinessesController < ApplicationController
 
   def show
     @business = Business.find(params[:id])
+    # @notes = @business.notes.find(params[:id])
+    @comments = Comment.where(note_id: @note).order("created_at Desc")
   end
 
 

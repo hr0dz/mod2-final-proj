@@ -6,11 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Note.destroy_all
-Neighborhood.destroy_all
-User.destroy_all
-Business.destroy_all
-UserNeighborhood.destroy_all
+# Note.destroy_all
+# Neighborhood.destroy_all
+# User.destroy_all
+# Business.destroy_all
+# UserNeighborhood.destroy_all
 
 Neighborhood.create(name: "Logan Square")
 Neighborhood.create(name: "Wicker Park")

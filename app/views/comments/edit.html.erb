@@ -1,0 +1,7 @@
+<%= form_for([@note, @comment]) do |f| %>
+<%= f.label :'Message:'%><br>
+<br>
+<%= f.text_area :message %><br>
+<br>
+<%= f.submit %>
+<% end %>
