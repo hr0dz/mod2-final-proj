@@ -10,13 +10,13 @@ class SessionsController < ApplicationController
           session[:user_id] = user.id
           redirect_to user
         else
-          flash[:message] = "wah wah"
+          flash[:message] = "wah wah wah"
           redirect_to login_path
         end
     end
 
 
-      def destroy
+      def delete
         session[:user_id] = nil
         redirect_to neighborhoods_path
     end

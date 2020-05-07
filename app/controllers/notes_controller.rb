@@ -11,7 +11,25 @@ class NotesController < ApplicationController
 
     def show 
         @note = Note.find(params[:id])
-    end 
+    end
+    
+    def edit
+      @note = Note.find(params[:id])
+    end
+
+    def update
+      @note = Note.find(params[:id])
+      @note.assign_attributes(note_params)
+      @note.save!
+      redirect_to business_path(@note.business)
+    end
+
+    def delete
+      @note = Note.find(params[:id])
+      @note.destroy
+      redirect_to business_path(@note.business)
+    end
+
 
   def create
     @business = Business.find(params[:business_id])

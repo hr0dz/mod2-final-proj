@@ -6,6 +6,7 @@ class CreateNotes < ActiveRecord::Migration[6.0]
             t.string :content
             t.string :title
             t.string :category
+            t.integer :comment_id
 
             t.timestamps null: false
         end

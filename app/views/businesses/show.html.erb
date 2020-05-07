@@ -1,13 +1,24 @@
 <h2><%= @business.name %></h2>
 <h2><%= @business.address %></h2><br>
+
+
+
+<ul>
 <% @business.notes.each do |note| %>
+
 <h1><%=note.category %></h1><br>
 <div class="note-body">
 <div class="note-title"><%=note.title %></div>
 <div><%=note.content %></div>
 <div><%=note.user.full_name %></div>
 </div>
-<% end %>
 
+
+<%= link_to "Edit Note", edit_note_path(note)%><br>
+<%= button_to "Delete Note", delete_note_path(note), method: :delete  %><br>
+<br>
+
+<% end %>
+</ul>
 
 <h3><%= link_to "Create Note for Business", new_business_note_path(@business) %></h3>
