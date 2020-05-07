@@ -15,11 +15,13 @@ Rails.application.routes.draw do
   # get 'comments/update'
   # get 'comments/destroy'
   resources :notes, only: [:index, :show, :edit, :update]
-  #resources :notes, only: [:index, :show]
   resources :users, only: [:new, :create, :show, :index, :edit, :update]
   resources :neighborhoods, only: [:index, :show]
   resources :businesses, only: [:index, :show, :new]
   resources :businesses, only: [:index, :show] do
+
+  root("neighborhoods#index")
+
   resources :notes, only: [:new, :create] do 
   resources :comments, only: [:new, :create, :edit, :update, :delete]
 end
