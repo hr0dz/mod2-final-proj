@@ -1,0 +1,11 @@
+<p><%= comment.message %></p>
+<p><%= comment.user.full_name %></p>
+
+<% if current_user == comment.user%>
+    <%= link_to "Delete comment ",  [comment.note, comment], method: :delete %><br>
+    <%= link_to "Edit comment", edit_note_comment_path(comment.note , comment)%>
+<% end %>
+
+<%# <%= render partial: 'comments/form', locals: {note: comment.note}%> 
+
+
