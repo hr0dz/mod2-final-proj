@@ -40,7 +40,6 @@ ActiveRecord::Schema.define(version: 2020_05_06_201411) do
     t.string "content"
     t.string "title"
     t.string "category"
-    t.integer "comment_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -56,7 +55,6 @@ ActiveRecord::Schema.define(version: 2020_05_06_201411) do
     t.string "full_name"
     t.string "email"
     t.string "password"
-    t.integer "comment_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "password_digest"

@@ -1,4 +1,14 @@
 Rails.application.routes.draw do 
+
+  delete '/notes/:id', to: 'notes#delete', as: 'delete_note'
+
+  # get '/businesses/:business_id/notes/new', to: 'notes#new', as: 'new_note'
+  post '/businesses/:business_id/notes', to: 'notes#create'
+  # post '/notes', to: 'notes#create'
+
+  get '/login', to: 'sessions#new', as: 'login'
+  post '/login', to: 'sessions#create'
+  delete '/logout', to: 'sessions#delete'
   # get 'comments/new'
   # get 'comments/create'
   # get 'comments/edit'
@@ -13,8 +23,6 @@ Rails.application.routes.draw do
   resources :notes, only: [:new, :create] do 
   resources :comments, only: [:new, :create, :edit, :update, :delete]
 end
-
-
   resources :notes, only: [:new, :create, :edit, :update]
   # get '/businesses/:business_id/notes/new', to: 'notes#new', as: 'new_note'
   #post '/businesses/:business_id/notes', to: 'notes#create'
@@ -22,14 +30,6 @@ end
   # post '/businesses/:business_id/notes', to: 'notes#create'
   # post '/notes', to: 'notes#create'
 
-  delete '/notes/:id', to: 'notes#delete', as: 'delete_note'
-
-  # get '/businesses/:business_id/notes/new', to: 'notes#new', as: 'new_note'
-  post '/businesses/:business_id/notes', to: 'notes#create'
-  # post '/notes', to: 'notes#create'
-
-  get '/login', to: 'sessions#new', as: 'login'
-  post '/login', to: 'sessions#create'
-  delete '/logout', to: 'sessions#delete'
+end
 end
 
