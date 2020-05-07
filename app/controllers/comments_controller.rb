@@ -1,3 +1,4 @@
+
 class CommentsController < ApplicationController 
     before_action :find_note
     before_action :find_comment, only: [:destroy, :edit, :update , :comment_owner]
@@ -57,4 +58,32 @@ class CommentsController < ApplicationController
             redirect_to @note
         end
     end
+
+  #def create
+    #@note = Note.find_by(params[:id])
+    #@comment = @notes.comment.build(comment_params)
+   # @current = User.find(session[:user_id])
+   # @comment.user = @current
+   # @comment.save
+    # if @comment.save
+    #   redirect_to notes_path
+    # else
+    #   render :new
+    # end
+
+ # end
+
+  #def update
+   # @comment = Comment.find_by(:id)
+   # @comment = Comment.update(params.require(:comment).permit(:name, :age))
+    #redirect_to_ path 
+  #end
+
+  #def destroy
+    #@comment = Comment.find_by(:id)
+   # @comment.destroy
+   # redirect_to_ path
+  #end
+
+
 end

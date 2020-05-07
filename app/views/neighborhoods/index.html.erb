@@ -1,19 +1,13 @@
-<%= link_to "Make An Account", new_user_path %>
-<br>
-<%= link_to "Login", login_path %>
-<br>
-<% if @current_user %>
-  (Welcome back! Logged in as <%= @current_user.email %>)
-<% end %>
-<br>
+<body class="index-body">
 
 
-Your Local Neighborhoods
+<h1 class="centered-title">Chi-Town-Tasks</h1>
 
 
 <br>
+<div class="neighborhoods-list">
 <% @neighborhoods.each do |neighborhood| %>
-<%= link_to neighborhood.name, neighborhood_path(neighborhood) %> <br>
+<%= link_to neighborhood.name, neighborhood_path(neighborhood) %> 
 <% end %>
-
-
+</div>
+</body>

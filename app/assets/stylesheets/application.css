@@ -13,3 +13,104 @@
  *= require_tree .
  *= require_self
  */
+
+ body {
+  background-color: snow;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+  .index-body {
+    background-color: snow;
+    background-image: url(https://img.pngio.com/chicago-star-png-8-png-image-chicago-stars-png-257_300.png);
+    background-position-x: center;
+    background-position-y: 160px;
+    background-size: 420px;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+  }
+
+ .centered-title {
+   text-align: center;
+   font-size: 70px;
+   background-color: #B3DDF2;
+   font-family: Arial, Helvetica, sans-serif;
+   margin: 0px;
+   margin: 0 -9999rem;
+   padding: 0.25rem 9999rem;
+   background: #B3DDF2;    
+   overflow-x: hidden; 
+ }
+
+ .neighborhoods-list{
+  width: 100%; 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly; 
+  font-size: 40px;
+  text-decoration: none; 
+ }
+
+ .neighborhoods-list > * {
+  width: 50%;
+  text-align: center;
+  padding-top: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  color: #B3DDF2;
+  text-shadow: 2px 1px black;
+}
+
+.note-body{
+  border-style: solid;
+  border-width: 2px;
+  padding-top: 0px;
+  border-radius: 5px; 
+}
+
+.note-title{
+  font-size: 30px;
+  background-color: #B3DDF2;
+  border-bottom: 5px solid red;
+  margin-bottom: 5px;
+  padding-left: 5px;
+  color: red;
+}
+
+.note-content{
+  font-size: 25px;
+  padding-left: 5px;
+}
+
+.note-name{
+  font-size: 20px;
+  padding-left: 5px;
+}
+
+.note-category{
+  font-size: 23px;
+  padding-bottom: 2px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-style: solid;
+  display: inline;
+  border-bottom: 0px;
+  border-width: 2px;
+  border-radius: 5px;
+}
+
+
+.neighborhood-title{
+  font-size: 40px;
+  background-color: #B3DDF2;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 -9999rem;
+  padding: 0.25rem 9999rem;
+  background: #B3DDF2;   
+  overflow-x: hidden; 
+}
+
+.business-names{
+  font-size: 25px;
+  text-decoration: none!important; 
+} 

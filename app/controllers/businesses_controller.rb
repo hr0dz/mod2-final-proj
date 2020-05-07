@@ -1,4 +1,6 @@
 class BusinessesController < ApplicationController
+  include SessionsHelper
+  before_action :authorize!, only: [:index, :new, :create, :edit, :update, :show]
 
   def index
     @businesses = Business.all
@@ -20,4 +22,11 @@ class BusinessesController < ApplicationController
           :neighborhood_id
         )
     end
+
+    def authorize!
+      unless session[:user_id]
+        flash[:message] = "no way jose"
+        redirect_to login_path
+      end
+  end 
 end

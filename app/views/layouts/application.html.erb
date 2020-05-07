@@ -21,9 +21,12 @@
     <% if signed_in? %>
     <%= link_to "Logout", logout_path, method: :delete %>
   <% else %>
-    <%= link_to 'Log in', login_path %>
+    <%= link_to 'Log in', login_path %> </br>
+    <%= link_to 'Make An Account', new_user_path %>
   <% end %>
   <p><%= flash[:message] %></p>
+  
+
   
     </ul>
   </div>
