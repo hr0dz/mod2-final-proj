@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+    include SessionsHelper
+    before_action :authorize!, only: [:index]
     def index
       @user = User.all
     end
@@ -27,6 +29,7 @@ class UsersController < ApplicationController
         end
     end
 
+
     private
 
     def user_params
@@ -35,7 +38,14 @@ class UsersController < ApplicationController
           :email,
           :password,
           :password_confirmation,
-          neighborhood_ids:[]
+          #:neighborhood_ids:[]
         )
     end
+
+    def authorize!
+        unless session[:user_id]
+          flash[:message] = "Must login first!"
+          redirect_to login_path
+        end
+    end 
 end

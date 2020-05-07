@@ -1,4 +1,6 @@
 class NotesController < ApplicationController
+    include SessionsHelper
+    before_action :authorize!, only: [:index, :new, :create, :edit, :update]
 
     def new 
         @note = Note.new
@@ -51,9 +53,15 @@ class NotesController < ApplicationController
           :category,
           :content,
           :title
-          #:user_id
         )
     end
+
+    def authorize!
+        unless session[:user_id]
+          flash[:message] = "no way jose"
+          redirect_to login_path
+        end
+    end 
 
 end
 
