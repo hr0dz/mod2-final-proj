@@ -1,6 +1,8 @@
 class NotesController < ApplicationController
     include SessionsHelper
+    #before_filter own_note, only: [:edit, :update]
     before_action :authorize!, only: [:index, :new, :create, :edit, :update]
+ 
 
     def new 
         @note = Note.new
@@ -17,6 +19,7 @@ class NotesController < ApplicationController
     
     def edit
       @note = Note.find(params[:id])
+
     end
 
     def update
@@ -45,6 +48,12 @@ class NotesController < ApplicationController
       render :new
     end
   end
+
+    #def own_note
+    #unless current_user == @note.user
+    #redirect_to(@note, notice: "You cannot edit this note")
+    #end
+    #end
 
     private
 

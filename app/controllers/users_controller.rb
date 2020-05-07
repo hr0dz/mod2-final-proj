@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
     include SessionsHelper
     before_action :authorize!, only: [:index]
+    
     def index
       @user = User.all
     end
@@ -38,7 +39,7 @@ class UsersController < ApplicationController
           :email,
           :password,
           :password_confirmation,
-          #:neighborhood_ids:[]
+          neighborhood_ids:[]
         )
     end
 
