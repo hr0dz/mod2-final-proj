@@ -7,6 +7,7 @@ class UsersController < ApplicationController
 
     def new
         @user = User.new
+        @neighborhoods = Neighborhood.all
     end
 
     def create
