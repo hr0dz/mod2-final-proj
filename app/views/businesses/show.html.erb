@@ -1,9 +1,12 @@
 <h2><%= @business.name %></h2>
 <h2><%= @business.address %></h2><br>
 <% @business.notes.each do |note| %>
-<h1><%=note.title %></h1><br>
-<h1><%=note.content %></h1><br>
-<h1><%=note.user.full_name %></h1><br>
+<h1><%=note.category %></h1><br>
+<div class="note-body">
+<div class="note-title"><%=note.title %></div>
+<div><%=note.content %></div>
+<div><%=note.user.full_name %></div>
+</div>
 <% end %>
 
 

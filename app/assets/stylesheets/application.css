@@ -13,3 +13,36 @@
  *= require_tree .
  *= require_self
  */
+
+ body {
+  background-color: snow;
+ }
+
+ .centered-title {
+   text-align: center;
+  
+ }
+
+ .neighborhoods-list{
+  width: 100%; 
+  display: flex;
+  flex-wrap: wrap;
+   justify-content: space-evenly; 
+ }
+ .neighborhoods-list > * {
+  width: 50%;
+  text-align: center;
+  padding-top: 50px
+}
+
+.note-body{
+  border-style: solid;
+  border-width: 2px;
+  padding: 12px;
+  border-radius: 5px; 
+}
+
+.note-title{
+  border-bottom: 2px;
+  color: red;
+}

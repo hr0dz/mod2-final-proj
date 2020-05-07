@@ -8,12 +8,13 @@
 <br>
 
 
-Your Local Neighborhoods
+<h1 class="centered-title">Welcome to Chi-Town-Tasks</h1>
 
 
 <br>
+<div class="neighborhoods-list">
 <% @neighborhoods.each do |neighborhood| %>
-<%= link_to neighborhood.name, neighborhood_path(neighborhood) %> <br>
+<%= link_to neighborhood.name, neighborhood_path(neighborhood) %> 
 <% end %>
-
+</div>
 
