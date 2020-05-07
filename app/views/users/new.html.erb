@@ -10,6 +10,9 @@
     <%= f.label :email %>
     <%= f.text_field :email %>
     <br>
+    <%= f.label :neighborhood_ids, "Neighborhoods Selection" %> <br>
+    <%= f.collection_check_boxes :neighborhood_ids, Neighborhood.all, :id, :name, { :multiple => true } %>
+    <br>
     <%= f.label :password %>
     <%= f.password_field :password %>
     <br>

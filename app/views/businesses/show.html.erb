@@ -6,7 +6,7 @@
 <ul>
 <% @business.notes.each do |note| %>
 
-<h1><%=note.category %></h1><br>
+<div class="note-category"><%=note.category %></div>
 <div class="note-body">
 <div class="note-title"><%=note.title %></div>
 <div class="note-content"><%=note.content %></div>

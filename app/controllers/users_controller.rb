@@ -34,7 +34,8 @@ class UsersController < ApplicationController
           :full_name,
           :email,
           :password,
-          :password_confirmation
+          :password_confirmation,
+          neighborhood_ids:[]
         )
     end
 end
