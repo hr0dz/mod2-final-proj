@@ -8,11 +8,12 @@ class UsersController < ApplicationController
 
     def new
         @user = User.new
-        #@neighborhoods = Neighborhood.all
+        @neighborhoods = Neighborhood.all
     end
 
     def create
         @user = User.new(user_params)
+        @neighborhoods = Neighborhood.all
         if @user.save
           session[:user_id] = @user.id
           redirect_to @user
