@@ -1,5 +1,6 @@
 <h2><%= @business.name %></h2>
 <h2><%= @business.address %></h2>
+<h2><%= link_to "Return to #{@business.neighborhood.name}", neighborhood_path(@business.neighborhood) %></h2>
 <h4><%= link_to "Create Note for Business", new_business_note_path(@business) %></h4>
 
 
@@ -11,8 +12,8 @@
     <div class="note-content"><%= note.content %></div>
     <div class="note-name">-<%= note.user.full_name %></div>
     </div>
-    <% if current_user == note.user %>
-        <%= link_to "Edit Note", edit_note_path(note)%><br>
+    <% if current_user == note.user %><br>
+        <%= button_to "Edit Note", edit_note_path(note), method: :get %><br>
         <%= button_to "Delete Note", delete_note_path(note), method: :delete, data: {confirm: "Are you sure?"}  %><br>
     <% end %>
     <h2>This note has <%= pluralize(note.comments.count, "Comment") %> </h2>
