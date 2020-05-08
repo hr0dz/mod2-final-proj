@@ -1,6 +1,6 @@
 class BusinessesController < ApplicationController
   include SessionsHelper
-  before_action :authorize!, only: [:index, :new, :create, :edit, :update, :show]
+  before_action :authorize!, only: [:index, :show]
 
   def index
     @businesses = Business.all
@@ -24,8 +24,8 @@ class BusinessesController < ApplicationController
     end
 
     def authorize!
-      unless session[:user_id]
-        flash[:message] = "no way jose"
+      unless signed_in?  
+        flash[:message] = "Must log in first!"
         redirect_to login_path
       end
   end 

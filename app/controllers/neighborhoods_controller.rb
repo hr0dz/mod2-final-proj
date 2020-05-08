@@ -9,13 +9,4 @@ class NeighborhoodsController < ApplicationController
     @neighborhood = Neighborhood.find(params[:id])
   end
   
-  
-  
-  # private
-    
-    # def neighborhood_params
-    #     params.require(:neighborhood).permit(
-    #       :name
-    #     )
-    # end
 end

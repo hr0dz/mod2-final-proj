@@ -45,8 +45,8 @@ class UsersController < ApplicationController
     end
 
     def authorize!
-        unless session[:user_id]
-          flash[:message] = "Must login first!"
+        unless signed_in?
+          flash[:message] = "Must log in first!"
           redirect_to login_path
         end
     end 

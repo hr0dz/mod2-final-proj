@@ -1,7 +1,7 @@
 class NotesController < ApplicationController
     include SessionsHelper
     #before_filter own_note, only: [:edit, :update]
-    before_action :authorize!, only: [:index, :new, :create, :edit, :update]
+    before_action :authorize!, only: [:index, :new, :create, :edit, :update, :show]
  
 
     def new 
@@ -66,8 +66,8 @@ class NotesController < ApplicationController
     end
 
     def authorize!
-        unless session[:user_id]
-          flash[:message] = "no way jose"
+        unless signed_in?
+          flash[:message] = "Must log in first!"
           redirect_to login_path
         end
     end 

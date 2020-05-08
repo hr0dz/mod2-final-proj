@@ -15,9 +15,9 @@ Rails.application.routes.draw do
   
   resources :businesses, only: [:index, :show] do
     resources :comments
-    resources :notes, only: [:new, :create, :edit, :update]
+    resources :notes, only: [:index, :new, :create, :edit, :update]
 end
-   resources :notes, only: [:new, :create, :edit, :update] do 
+   resources :notes, only: [:index, :new, :create, :edit, :update] do 
         resources :comments
 end
 end

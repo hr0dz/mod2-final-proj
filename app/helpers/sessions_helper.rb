@@ -9,8 +9,4 @@ module SessionsHelper
     def signed_in?
       !!current_user
     end
-  
-    #def is_current_user?(user_obj)
-      #current_user.id == user_obj.id
-    #end
   end
